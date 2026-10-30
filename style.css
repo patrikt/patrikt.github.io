@@ -1,0 +1,134 @@
+:root {
+  --bg: #0d0d0d;
+  --fg: #ededed;
+  --fg-secondary: #7c7c7c;
+  --fg-tertiary: #4c4c4c;
+  --border: #1e1e1e;
+  --border-hover: #2e2e2e;
+  --accent: #3b82f6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 17px;
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 4rem 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--fg-secondary);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  color: var(--fg-tertiary);
+  font-size: 0.9rem;
+}
+
+h2 {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--fg-secondary);
+  margin-bottom: 1rem;
+}
+
+h2::before {
+  content: "# ";
+  color: var(--accent);
+  letter-spacing: 0;
+}
+
+.placeholder {
+  color: var(--fg-tertiary);
+  font-style: italic;
+}
+
+.principles {
+  list-style: none;
+}
+
+.principles li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--fg-secondary);
+}
+
+.principles li::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.links li {
+  margin-bottom: 0.5rem;
+}
+
+.links a {
+  font-size: 0.875rem;
+  color: var(--fg-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  transition: color 0.2s ease;
+}
+
+.links a:hover {
+  color: var(--fg);
+  border-bottom: 1px solid var(--fg);
+}
